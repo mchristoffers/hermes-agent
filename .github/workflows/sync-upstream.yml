@@ -6,6 +6,11 @@
 # Already up to date -> green no-op. Merge conflict -> fails loudly with the
 # conflicting files listed; resolve by hand (fork-owned files don't exist
 # upstream, so this should practically never happen).
+#
+# .github/workflows/ is FROZEN at fork state: GITHUB_TOKEN can never push
+# workflow changes (no grantable `workflows` permission), so the merge
+# restores that dir and amends. Upstream CI workflow changes are deliberately
+# not taken — want one? Copy it over manually.
 name: Sync upstream
 
 on:
@@ -23,7 +28,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout fork (full history for merge)
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           fetch-depth: 0
 
@@ -42,17 +47,26 @@ jobs:
             git diff --name-only --diff-filter=U
             exit 1
           fi
-          after=$(git rev-parse HEAD)
 
-          if [ "$before" = "$after" ]; then
+          if [ "$(git rev-parse HEAD)" = "$before" ]; then
             echo "Already up to date with upstream/main." | tee -a "$GITHUB_STEP_SUMMARY"
-          else
-            git push origin HEAD:main
-            count=$(git rev-list --count "$before..upstream/main")
-            {
-              echo "### Synced upstream"
-              echo ""
-              echo "Merged $count upstream commits."
-              echo "New HEAD: \`$(git rev-parse --short=12 HEAD)\`"
-            } >> "$GITHUB_STEP_SUMMARY"
+            exit 0
           fi
+
+          # Keep fork workflows frozen (see header). restore removes files
+          # absent from --source, so upstream-new workflows are dropped too.
+          if ! git diff --quiet "$before" HEAD -- .github/workflows; then
+            git restore --source="$before" --staged --worktree -- .github/workflows
+            git commit --amend --no-edit
+            echo "Skipped upstream .github/workflows changes (frozen at fork state)." \
+              | tee -a "$GITHUB_STEP_SUMMARY"
+          fi
+
+          git push origin HEAD:main
+          count=$(git rev-list --count "$before..upstream/main")
+          {
+            echo "### Synced upstream"
+            echo ""
+            echo "Merged $count upstream commits."
+            echo "New HEAD: \`$(git rev-parse --short=12 HEAD)\`"
+          } >> "$GITHUB_STEP_SUMMARY"
