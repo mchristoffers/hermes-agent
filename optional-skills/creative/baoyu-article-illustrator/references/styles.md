@@ -7,7 +7,6 @@ Simplified style tier for quick selection:
 | Core Style | Maps To | Best For |
 |------------|---------|----------|
 | `vector` | vector-illustration | Knowledge articles, tutorials, tech content |
-| `minimal-flat` | notion | General, knowledge sharing, SaaS |
 | `sci-fi` | blueprint | AI, frontier tech, system design |
 | `hand-drawn` | sketch/warm | Relaxed, reflective, casual content |
 | `editorial` | editorial | Processes, data, journalism |
@@ -23,7 +22,6 @@ Use Core Styles for most cases. See full Style Gallery below for granular contro
 | Style | Description | Best For |
 |-------|-------------|----------|
 | `vector-illustration` | Clean flat vector art with bold shapes | Knowledge articles, tutorials, tech content |
-| `notion` | Minimalist hand-drawn line art | Knowledge sharing, SaaS, productivity |
 | `elegant` | Refined, sophisticated | Business, thought leadership |
 | `warm` | Friendly, approachable | Personal growth, lifestyle, education |
 | `minimal` | Ultra-clean, zen-like | Philosophy, minimalism, core concepts |
@@ -50,14 +48,14 @@ Full specifications: `references/styles/<style>.md`
 
 ## Type × Style Compatibility Matrix
 
-| | vector-illustration | notion | warm | minimal | blueprint | watercolor | elegant | editorial | scientific | screen-print |
-|---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-| infographic | ✓✓ | ✓✓ | ✓ | ✓✓ | ✓✓ | ✓ | ✓✓ | ✓✓ | ✓✓ | ✓ |
-| scene | ✓ | ✓ | ✓✓ | ✓ | ✗ | ✓✓ | ✓ | ✓ | ✗ | ✓✓ |
-| flowchart | ✓✓ | ✓✓ | ✓ | ✓ | ✓✓ | ✗ | ✓ | ✓✓ | ✓ | ✗ |
-| comparison | ✓✓ | ✓✓ | ✓ | ✓✓ | ✓ | ✓ | ✓✓ | ✓✓ | ✓ | ✓ |
-| framework | ✓✓ | ✓✓ | ✓ | ✓✓ | ✓✓ | ✗ | ✓✓ | ✓ | ✓✓ | ✓ |
-| timeline | ✓ | ✓✓ | ✓ | ✓ | ✓ | ✓✓ | ✓✓ | ✓✓ | ✓ | ✓ |
+| | vector-illustration | warm | minimal | blueprint | watercolor | elegant | editorial | scientific | screen-print |
+|---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+| infographic | ✓✓ | ✓ | ✓✓ | ✓✓ | ✓ | ✓✓ | ✓✓ | ✓✓ | ✓ |
+| scene | ✓ | ✓✓ | ✓ | ✗ | ✓✓ | ✓ | ✓ | ✗ | ✓✓ |
+| flowchart | ✓✓ | ✓ | ✓ | ✓✓ | ✗ | ✓ | ✓✓ | ✓ | ✗ |
+| comparison | ✓✓ | ✓ | ✓✓ | ✓ | ✓ | ✓✓ | ✓✓ | ✓ | ✓ |
+| framework | ✓✓ | ✓ | ✓✓ | ✓✓ | ✗ | ✓✓ | ✓ | ✓✓ | ✓ |
+| timeline | ✓ | ✓ | ✓ | ✓ | ✓✓ | ✓✓ | ✓✓ | ✓ | ✓ |
 
 ✓✓ = highly recommended | ✓ = compatible | ✗ = not recommended
 
@@ -65,11 +63,11 @@ Full specifications: `references/styles/<style>.md`
 
 | Type | Primary Style | Secondary Styles |
 |------|---------------|------------------|
-| infographic | vector-illustration | notion, blueprint, editorial |
+| infographic | vector-illustration | blueprint, editorial |
 | scene | warm | watercolor, elegant |
-| flowchart | vector-illustration | notion, blueprint |
-| comparison | vector-illustration | notion, elegant |
-| framework | blueprint | vector-illustration, notion |
+| flowchart | vector-illustration | blueprint |
+| comparison | vector-illustration | elegant |
+| framework | blueprint | vector-illustration |
 | timeline | elegant | warm, editorial |
 
 ## Auto Selection by Content Signals
@@ -77,15 +75,15 @@ Full specifications: `references/styles/<style>.md`
 | Content Signals | Recommended Type | Recommended Style |
 |-----------------|------------------|-------------------|
 | API, metrics, data, comparison, numbers | infographic | blueprint, vector-illustration |
-| Knowledge, concept, tutorial, learning, guide | infographic | vector-illustration, notion |
+| Knowledge, concept, tutorial, learning, guide | infographic | vector-illustration |
 | Tech, AI, programming, development, code | infographic | vector-illustration, blueprint |
-| How-to, steps, workflow, process, tutorial | flowchart | vector-illustration, notion |
+| How-to, steps, workflow, process, tutorial | flowchart | vector-illustration |
 | Framework, model, architecture, principles | framework | blueprint, vector-illustration |
-| vs, pros/cons, before/after, alternatives | comparison | vector-illustration, notion |
+| vs, pros/cons, before/after, alternatives | comparison | vector-illustration |
 | Manifesto, mindset shift, workforce, OS, whiteboard, professional visual note | comparison / framework | ink-notes |
 | Story, emotion, journey, experience, personal | scene | warm, watercolor |
 | History, timeline, progress, evolution | timeline | elegant, warm |
-| Productivity, SaaS, tool, app, software | infographic | notion, vector-illustration |
+| Productivity, SaaS, tool, app, software | infographic | vector-illustration |
 | Business, professional, strategy, corporate | framework | elegant |
 | Opinion, editorial, culture, philosophy, cinematic, dramatic, poster | scene | screen-print |
 | Biology, chemistry, medical, scientific | infographic | scientific |
@@ -124,12 +122,6 @@ Full specifications: `references/styles/<style>.md`
 - Monospace labels, data-focused
 - Blue/white color scheme
 
-### infographic + notion
-- Hand-drawn feel, approachable
-- Soft icons, rounded elements
-- Neutral palette, clean backgrounds
-- Perfect for SaaS/productivity
-
 ### scene + warm
 - Golden hour lighting, cozy atmosphere
 - Soft gradients, natural textures
@@ -141,12 +133,6 @@ Full specifications: `references/styles/<style>.md`
 - Soft edges, color bleeding
 - Dreamy, creative mood
 - Best for lifestyle/travel
-
-### flowchart + notion
-- Clear step indicators
-- Simple arrow connections
-- Minimal decoration
-- Focus on process clarity
 
 ### flowchart + blueprint
 - Technical precision

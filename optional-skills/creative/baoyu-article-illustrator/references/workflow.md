@@ -142,7 +142,6 @@ Present Core Styles first:
 
 | Core Style | Maps To | Best For |
 |------------|---------|----------|
-| `minimal-flat` | notion | General, knowledge sharing, SaaS |
 | `sci-fi` | blueprint | AI, frontier tech, system design |
 | `hand-drawn` | sketch/warm | Relaxed, reflective, casual |
 | `editorial` | editorial | Processes, data, journalism |

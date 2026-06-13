@@ -50,7 +50,7 @@ description: "通过 remindctl 管理 Apple Reminders：添加、列出、完成
 
 - 调度 agent 提醒 → 改用 cronjob 工具
 - 日历事件 → 使用 Apple Calendar 或 Google Calendar
-- 项目任务管理 → 使用 GitHub Issues、Notion 等
+- 项目任务管理 → 使用 GitHub Issues 等
 - 用户说"提醒我"但意指 agent 提醒 → 先行确认
 
 ## 快速参考

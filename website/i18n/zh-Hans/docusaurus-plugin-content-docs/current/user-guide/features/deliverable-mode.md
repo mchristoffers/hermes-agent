@@ -69,7 +69,6 @@ kanban_complete(
 
 | 服务 | 解锁功能 |
 |---|---|
-| **Notion** | 读写 Notion 页面、数据库，查询工作区 |
 | **GitHub** | Issues、PR、评论、超出 gh CLI 范围的仓库搜索 |
 | **Linear** | 工单、项目、迭代周期 |
 | **Slack** | 工作区全局搜索、读取其他频道 |

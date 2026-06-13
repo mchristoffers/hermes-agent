@@ -1,7 +1,7 @@
 ---
 name: mealie
 description: "Manage recipes, meal plans, and shopping lists in the self-hosted Mealie instance via its REST API. Import recipes from a URL, a photo/screenshot, handwritten cards, or pasted text."
-version: 1.0.0
+version: 1.1.0
 author: moritz
 license: MIT
 platforms: [linux, macos, windows]
@@ -201,6 +201,42 @@ voice note, or freeform text someone pasted into chat.
 | A photo / screenshot / handwritten card | Path C (you read the image → manual create) |
 | Pasted recipe text, a voice note, a DM | Path C |
 | 20 links to bulk-add | Path A `create/url/bulk` |
+
+### Source link & importing ratings (avg + count)
+When importing from a recipe portal (Chefkoch, etc.), also carry over the **original
+link** and the **rating** so the collection stays traceable.
+
+- **Original link → `orgURL`.** Path A (`create/url`) sets `orgURL` automatically to
+  the source URL — nothing to do. For Path B/C, set it yourself in the PUT body:
+  `jq '. + {orgURL: "https://…"}'`.
+
+- **Star average → per-user rating endpoint, NOT the recipe PUT.** Mealie stores the
+  rating per user, so `"rating"` in a recipe `PUT` is silently ignored (re-GET shows
+  `null`). Set it through the user endpoint instead:
+  ```bash
+  ME=$(curl -s "$B/api/users/self" "${H[@]}" | jq -r .id)
+  curl -s -X POST "$B/api/users/$ME/ratings/$SLUG" "${H[@]}" -d '{"rating": 4.7}'
+  # re-GET the recipe -> .rating is now 4.7 (float accepted; UI rounds the stars)
+  ```
+
+- **Rating *count* has no native field → store as a note + in `extras`.** A note shows
+  on the recipe page; `extras` is machine-readable for later filtering/sorting. Merge
+  both into the recipe PUT body (keep any existing notes):
+  ```bash
+  curl -s "$B/api/recipes/$SLUG" "${H[@]}" \
+    | jq --arg avg "4,7" --arg cnt "980" '. + {
+        notes: ((.notes // []) | map(select(.title != "Chefkoch-Bewertung"))
+                 + [{title: "Chefkoch-Bewertung", text: ($avg + " ★ von 5 (" + $cnt + " Bewertungen)")}]),
+        extras: ((.extras // {}) + {chefkoch_rating: "4.7", chefkoch_rating_count: $cnt})
+      }' > /tmp/r.json
+  curl -s -X PUT "$B/api/recipes/$SLUG" "${H[@]}" -d @/tmp/r.json | jq '.slug'
+  ```
+
+> **"Most popular" on Chefkoch** = sort by *number of ratings*, not the 5-star average
+> (the rating sort `…/rs/s0o3/…` surfaces 5★ recipes with only a handful of votes). Use
+> the default relevance search `…/rs/s0/<query>/Rezepte.html` and pick the result with
+> the highest *Bewertungen* count. Strip the tracking `#…` fragment off the recipe URL
+> before importing.
 
 ## Meal Plans
 

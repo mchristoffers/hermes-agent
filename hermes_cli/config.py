@@ -3042,14 +3042,6 @@ OPTIONAL_ENV_VARS = {
     # env blocklist in tools/environments/local.py does NOT rewrite them —
     # skills legitimately need these passed through to curl via
     # tools/env_passthrough.py when the user's skill calls out.
-    "NOTION_API_KEY": {
-        "description": "Notion integration token (used by the `notion` skill)",
-        "prompt": "Notion API key",
-        "url": "https://www.notion.so/my-integrations",
-        "password": True,
-        "category": "skill",
-        "advanced": True,
-    },
     "LINEAR_API_KEY": {
         "description": "Linear personal API key (used by the `linear` skill)",
         "prompt": "Linear API key",

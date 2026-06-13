@@ -50,7 +50,7 @@ Use `remindctl` to manage Apple Reminders directly from the terminal. Tasks sync
 
 - Scheduling agent alerts → use the cronjob tool instead
 - Calendar events → use Apple Calendar or Google Calendar
-- Project task management → use GitHub Issues, Notion, etc.
+- Project task management → use GitHub Issues, etc.
 - If user says "remind me" but means an agent alert → clarify first
 
 ## Quick Reference

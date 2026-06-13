@@ -170,7 +170,6 @@ description: "54 个真实设计系统（Stripe、Linear、Vercel）的 HTML/CSS
 | `framer.md` | Framer | 粗犷黑蓝，动效优先，设计前沿 |
 | `intercom.md` | Intercom | 友好蓝色调，对话式 UI 模式 |
 | `miro.md` | Miro | 亮黄强调色，无限画布美学 |
-| `notion.md` | Notion | 温暖极简，衬线标题，柔和表面 |
 | `pinterest.md` | Pinterest | 红色强调，瀑布流网格，图片优先布局 |
 | `webflow.md` | Webflow | 蓝色强调，精致营销站美学 |
 
@@ -201,10 +200,10 @@ description: "54 个真实设计系统（Stripe、Linear、Vercel）的 HTML/CSS
 根据内容匹配设计：
 
 - **开发者工具 / 仪表盘：** Linear、Vercel、Supabase、Raycast、Sentry
-- **文档 / 内容站点：** Mintlify、Notion、Sanity、MongoDB
+- **文档 / 内容站点：** Mintlify、Sanity、MongoDB
 - **营销 / 落地页：** Stripe、Framer、Apple、SpaceX
 - **暗色模式 UI：** Linear、Cursor、ElevenLabs、Warp、Superhuman
-- **浅色 / 简洁 UI：** Vercel、Stripe、Notion、Cal.com、Replicate
+- **浅色 / 简洁 UI：** Vercel、Stripe、Cal.com、Replicate
 - **活泼 / 友好：** PostHog、Figma、Lovable、Zapier、Miro
 - **高端 / 奢华：** Apple、BMW、Stripe、Superhuman、Revolut
 - **数据密集 / 仪表盘：** Sentry、Kraken、Cohere、ClickHouse

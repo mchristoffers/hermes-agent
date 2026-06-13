@@ -1,6 +1,6 @@
 ---
 name: popular-web-designs
-description: 54 real design systems (Stripe, Linear, Vercel) as HTML/CSS.
+description: 53 real design systems (Stripe, Linear, Vercel) as HTML/CSS.
 version: 1.0.0
 author: Hermes Agent + Teknium (design systems sourced from VoltAgent/awesome-design-md)
 license: MIT
@@ -20,7 +20,7 @@ triggers:
 
 # Popular Web Designs
 
-54 real-world design systems ready for use when generating HTML/CSS. Each template captures a
+53 real-world design systems ready for use when generating HTML/CSS. Each template captures a
 site's complete visual language: color palette, typography hierarchy, component styles, spacing
 system, shadows, responsive behavior, and practical agent prompts with exact CSS values.
 
@@ -173,7 +173,6 @@ those carry more visual identity than the specific font face.
 | `framer.md` | Framer | Bold black and blue, motion-first, design-forward |
 | `intercom.md` | Intercom | Friendly blue palette, conversational UI patterns |
 | `miro.md` | Miro | Bright yellow accent, infinite canvas aesthetic |
-| `notion.md` | Notion | Warm minimalism, serif headings, soft surfaces |
 | `pinterest.md` | Pinterest | Red accent, masonry grid, image-first layout |
 | `webflow.md` | Webflow | Blue-accented, polished marketing site aesthetic |
 
@@ -204,10 +203,10 @@ those carry more visual identity than the specific font face.
 Match the design to the content:
 
 - **Developer tools / dashboards:** Linear, Vercel, Supabase, Raycast, Sentry
-- **Documentation / content sites:** Mintlify, Notion, Sanity, MongoDB
+- **Documentation / content sites:** Mintlify, Sanity, MongoDB
 - **Marketing / landing pages:** Stripe, Framer, Apple, SpaceX
 - **Dark mode UIs:** Linear, Cursor, ElevenLabs, Warp, Superhuman
-- **Light / clean UIs:** Vercel, Stripe, Notion, Cal.com, Replicate
+- **Light / clean UIs:** Vercel, Stripe, Cal.com, Replicate
 - **Playful / friendly:** PostHog, Figma, Lovable, Zapier, Miro
 - **Premium / luxury:** Apple, BMW, Stripe, Superhuman, Revolut
 - **Data-dense / dashboards:** Sentry, Kraken, Cohere, ClickHouse

@@ -22,7 +22,7 @@ The user can specify any of the following directly in their request. If not spec
 | Option | Example phrasing |
 |--------|------------------|
 | Type | "as an infographic", "as a flowchart", "as scenes" |
-| Style | "in blueprint style", "use notion style", "用 watercolor 风格" |
+| Style | "in blueprint style", "用 watercolor 风格" |
 | Preset | "use the tech-explainer preset", "storytelling preset" |
 | Palette | "with macaron palette", "warm colors only" |
 | Density | "minimal images", "one per section", "rich illustrations" |
@@ -46,5 +46,3 @@ The user can specify any of the following directly in their request. If not spec
 **Opinion article**:
 > Illustrate opinion.md with the opinion-piece preset
 
-**Preset with style override**:
-> Use the tech-explainer preset for article.md but swap the style for notion

@@ -236,7 +236,7 @@ hermes teams-pipeline show <job-id>
 - [ ] 若需要 STT 回退，录制订阅已创建
 - [ ] 若启用录制回退，`ffmpeg` 已安装
 - [ ] Teams 出站投递目标已配置并验证
-- [ ] Notion 和 Linear 接收端仅在实际需要时配置
+- [ ] Linear 接收端仅在实际需要时配置
 - [ ] `hermes teams-pipeline validate` 返回 OK 快照
 - [ ] `hermes teams-pipeline token-health --force-refresh` 执行成功
 - [ ] **`maintain-subscriptions` 已配置计划任务**（Hermes cron、systemd timer 或 crontab——参见[自动化订阅续期](#automating-subscription-renewal-required-for-production)）。若未配置，Graph 订阅将在 72 小时内静默过期。
@@ -264,7 +264,6 @@ hermes teams-pipeline show <job-id>
 | 录制资源订阅 | |
 | Teams 投递模式 | |
 | Teams 聊天 ID 或团队/频道 | |
-| Notion 数据库 ID | |
 | Linear 团队 ID | |
 | Store 路径覆盖（如有） | |
 | 每日检查负责人 | |

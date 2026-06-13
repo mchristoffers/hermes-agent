@@ -154,14 +154,6 @@ FAKE_MCP_TOOLS: List[Dict[str, Any]] = [
         "returns": lambda args: {"ok": True},
     },
 
-    # Notion
-    {
-        "name": "notion_create_page",
-        "description": "Create a new page in the connected Notion workspace.",
-        "params": {"title": ("string", ""), "body": ("string", ""), "parent": ("string", "")},
-        "returns": lambda args: {"ok": True, "page_id": "abc123"},
-    },
-
     # Random others (filler / distractors)
     {
         "name": "weather_get",

@@ -236,7 +236,7 @@ Check:
 - [ ] recording subscription is created if STT fallback is required
 - [ ] `ffmpeg` is installed if recording fallback is enabled
 - [ ] Teams outbound delivery target is configured and verified
-- [ ] Notion and Linear sinks are configured only if actually needed
+- [ ] Linear sink is configured only if actually needed
 - [ ] `hermes teams-pipeline validate` returns an OK snapshot
 - [ ] `hermes teams-pipeline token-health --force-refresh` succeeds
 - [ ] **`maintain-subscriptions` is scheduled** (Hermes cron, systemd timer, or crontab — see [Automating subscription renewal](#automating-subscription-renewal-required-for-production)). Without this, Graph subscriptions silently expire within 72 hours.
@@ -264,7 +264,6 @@ Fill this out before rollout:
 | Recording resource subscription | |
 | Teams delivery mode | |
 | Teams chat ID or team/channel | |
-| Notion database ID | |
 | Linear team ID | |
 | Store path override, if any | |
 | Owner for daily checks | |

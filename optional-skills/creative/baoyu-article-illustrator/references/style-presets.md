@@ -18,9 +18,7 @@ A preset expands to a type + style + optional palette combination. Users can ove
 | Preset | Type | Style | Palette | Best For |
 |----------|------|-------|---------|----------|
 | `knowledge-base` | `infographic` | `vector-illustration` | — | Concept explainers, tutorials, how-to |
-| `saas-guide` | `infographic` | `notion` | — | Product guides, SaaS docs, tool walkthroughs |
 | `tutorial` | `flowchart` | `vector-illustration` | — | Step-by-step tutorials, setup guides |
-| `process-flow` | `flowchart` | `notion` | — | Workflow documentation, onboarding flows |
 | `warm-knowledge` | `infographic` | `vector-illustration` | `warm` | Product showcases, team intros, feature cards, brand content |
 | `edu-visual` | `infographic` | `vector-illustration` | `macaron` | Knowledge summaries, concept explainers, educational articles |
 | `hand-drawn-edu` | `flowchart` | `sketch-notes` | `macaron` | Hand-drawn educational diagrams, process explainers, onboarding visuals |
@@ -74,7 +72,6 @@ Use this table during Step 3 to recommend presets based on Step 2 content analys
 
 ## Override Examples
 
-- "use the tech-explainer preset but swap the style for notion" = infographic type with notion style
 - "storytelling preset with timeline type" = timeline type with warm style
 
 Explicit type/style/palette mentions in the user's request always override preset values.

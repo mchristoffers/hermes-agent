@@ -27,7 +27,7 @@ The pipeline:
 2. resolves the meeting and prefers transcript artifacts first
 3. falls back to recording download plus STT when no usable transcript is available
 4. stores durable job state and sink records locally
-5. can write summaries to Notion, Linear, and Microsoft Teams
+5. can write summaries to Linear and Microsoft Teams
 
 Operator actions stay in the CLI (the `teams-pipeline` subcommand is registered by the `teams_pipeline` plugin — enable it via `hermes plugins enable teams_pipeline` or set `plugins.enabled: [teams_pipeline]` in `config.yaml`):
 
@@ -120,8 +120,6 @@ platforms:
         transcript_required: false
         transcription_fallback: true
         ffmpeg_extract_audio: true
-        notion:
-          enabled: false
         linear:
           enabled: false
 ```

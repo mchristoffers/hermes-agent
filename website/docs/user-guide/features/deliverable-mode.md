@@ -104,7 +104,6 @@ community servers for most popular tools — install whichever you need:
 
 | Service | What it unlocks |
 |---|---|
-| **Notion** | Read/write Notion pages, databases, query workspace |
 | **GitHub** | Issues, PRs, comments, repo search beyond the gh CLI |
 | **Linear** | Tickets, projects, cycles |
 | **Slack** | Workspace-wide search, read other channels |

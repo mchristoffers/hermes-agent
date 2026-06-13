@@ -43,7 +43,7 @@ Trigger this skill when the user asks to illustrate an article, add images to an
 | Dimension | Controls | Examples |
 |-----------|----------|----------|
 | **Type** | Information structure | infographic, scene, flowchart, comparison, framework, timeline |
-| **Style** | Rendering approach | notion, warm, minimal, blueprint, watercolor, elegant |
+| **Style** | Rendering approach | warm, minimal, blueprint, watercolor, elegant |
 | **Palette** | Color scheme (optional) | macaron, warm, neon — overrides style's default colors |
 
 Combine freely: `type=infographic, style=vector-illustration, palette=macaron`.
